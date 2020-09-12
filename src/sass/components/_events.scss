@@ -1,5 +1,12 @@
 .events-list{
 @extend %list;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-bottom: 30px;
+}
+.mb25{
+    margin-bottom: 25px;
 }
 .events-section{
     background-color: $events-section-bgc;
@@ -14,15 +21,108 @@
     border-radius: 24px;
     width: 220px;
     height: auto;
+    margin-bottom: 20px;
+}
+.events-list__item__first-section{
+    border-bottom: 1px solid #E1E1E1
 }
 .events-list__item__first-section__cafe{
+    margin: 0;
     width: 80px;
     display: flex;
+    justify-content: center;
     background-color:$yellow-bgc;
     border-radius: 4px;
     font-size: 12px;
-    justify-content: center;
     color: $white;
     text-transform: uppercase;
-    fontw: 500;
+    font-weight: 500;
+    line-height: 1.35;
+}
+.events-list__item__first-section__foodtruck{
+    margin: 0;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    background-color:$green-bg-color;
+    border-radius: 4px;
+    font-size: 12px;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.35;
+}
+.events-list__item__first-section__first-row{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+}
+.events-list__item__first-section__second-row{
+    font-weight: 500;
+    font-size: 12px;
+    color:$secondary-text-color;
+
+}
+.events-list__item__second-section{
+    border-bottom: 1px solid #E1E1E1
+}
+.events-list__item__second-section__first-row{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+}
+.events-list__item__second-section__second-row{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    color: $circle-bgc;
+}
+.events-list__item__third-section{
+    margin-top: 25px;
+}
+.events-list__item__third-section__first-row{
+    @extend %link;
+    font-weight: 500;
+    font-size: 12px;
+    color: $secondary-text-color;
+}
+.events-list__item__third-section__second-row{
+    @extend %link;
+    font-weight: 500;
+    font-size: 12px;
+    color: $secondary-text-color;  
+}
+.event-section__btn-container{
+    @extend %centered-flex;
+    flex-wrap: wrap;
+}
+.event-section__btn-container__first-btn,.event-section__btn-container__second-btn{
+    @extend %link;
+    width: 198px;
+    display: flex;
+    justify-content: center;
+    border-radius:22px; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7.5px 0px;
+    margin-bottom: 10px;
+}
+.event-section__btn-container__first-btn{
+    margin-right: 15px;
+    background-color: $primary-text-pink;
+    color: $white;
+}
+.event-section__btn-container__second-btn{
+    background-color: $white;
+    color: $primary-text-pink;
+}
+.event-section__btn-container__second-btn:hover{
+    background-color: $button-hover-color;
+    transition: 1s;
+}
+.event-section__btn-container__first-btn__arrow,.event-section__btn-container__second-btn__arrow{
+    margin-left: 10px;
+    margin-top: 1.45px;
 }
