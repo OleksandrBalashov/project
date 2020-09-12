@@ -1,10 +1,11 @@
 .section-made {
   background: $section-bgc;
+  padding-top: 125px;
 }
 
 .title-made {
-  padding-top: 125px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 26px;
 
   font-family: $second-font-family;
   font-weight: 400;
@@ -16,7 +17,7 @@
   color: $circle-bgc;
 
   .second-title {
-    margin-top: 15px;
+    padding-top: 15px;
 
     font-family: $second-font-family;
     font-weight: 400;
@@ -28,4 +29,33 @@
 
     color: $primary-text-pink;
   }
+}
+
+.photo-cow {
+  margin: 0 auto 46px;
+}
+
+.text-cow {
+  margin: 0 auto 40px;
+  width: 238px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  color: $black;
+}
+
+.color-gray {
+  color: $secondary-text-color;
+
+  .pt-top {
+    display: block;
+    padding-top: 20px;
+  }
+}
+
+.botton-made {
+  padding: 10px 37px;
+  background: $white;
 }
