@@ -1,1 +1,39 @@
+.wrap-header {
+  display: flex;
 
+  .button-menu {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+  }
+}
+
+.wrap-nav {
+  background: $bg-color-menu;
+  .button-close {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    height: 14px;
+  }
+
+  .button-buy {
+    @extend %link;
+    display: inline-block;
+    padding: 10px 45px;
+    color: $primary-text-pink;
+
+    border-radius: 22px;
+    background: $white;
+  }
+}
+
+.page-nav {
+  .header-list {
+    @extend %list;
+  }
+}
