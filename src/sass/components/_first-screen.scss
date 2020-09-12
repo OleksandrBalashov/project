@@ -1,39 +1,266 @@
-.wrap-header {
-  display: flex;
+.first-screen {
+  background: $main-bgc;
+  //   z-index: -10;
 
+  @media screen and (max-width: 767px) {
+    height: 502px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 399px;
+  }
+
+  @media screen and (min-width: 1199px) {
+    height: 665px;
+  }
+
+  .container {
+    position: relative;
+    padding-top: 8px;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 83px;
+  right: -77px;
+
+  width: 346px;
+  height: 344px;
+  background: $circle-bgc;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.img-bg {
+  position: absolute;
+  top: 92px;
+  right: 30px;
+  width: 171px;
+  height: 410px;
+  background: url('../images/ice-m.png') no-repeat;
+  z-index: -1;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background: url('../images/ice-m@2x.png') no-repeat;
+  }
+}
+
+.wrap-header {
   .button-menu {
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
-    border: 0;
-    cursor: pointer;
-    background: transparent;
+    display: none;
+  }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+
+    .button-menu {
+      display: block;
+      margin: 0;
+      margin-left: auto;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+    }
   }
 }
 
 .wrap-nav {
-  background: $bg-color-menu;
+  display: none;
+
   .button-close {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    height: 14px;
+    display: none;
   }
 
-  .button-buy {
-    @extend %link;
-    display: inline-block;
-    padding: 10px 45px;
-    color: $primary-text-pink;
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    // display: block;
+    top: 0;
+    right: 0;
 
-    border-radius: 22px;
-    background: $white;
+    width: 250px;
+    height: 500px;
+    padding-top: 23px;
+    background: $bg-color-menu;
+
+    .button-close {
+      display: flex;
+      margin: 0;
+      margin-left: auto;
+      margin-bottom: 23px;
+      margin-right: 20px;
+
+      padding: 0;
+      border: 0;
+
+      height: 14px;
+
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.button-buy {
+  @extend %link;
+  display: inline-block;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  padding: 12px 56px;
+  margin-left: 21px;
+  margin-bottom: 19px;
+
+  color: $primary-text-pink;
+  background: $white;
+
+  border-radius: 22px;
+  transition: 250ms linear;
+
+  // text-align: center;
+
+  .arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+
+    border-right: 2px solid $primary-text-pink;
+    border-bottom: 2px solid $primary-text-pink;
+    border-bottom-right-radius: 1px;
+    transform: rotate(-45deg);
+
+    transition: 250ms linear;
+  }
+
+  .button-buy-text {
+    margin-right: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background: $primary-text-pink;
+  }
+
+  &:hover .arrow,
+  &:hover .arrow {
+    border-right-color: $white;
+    border-bottom-color: $white;
+  }
+}
+
+.page-header {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  > .button-buy {
+    display: none;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: block;
+    }
   }
 }
 
 .page-nav {
   .header-list {
     @extend %list;
+
+    .nav-link {
+      @extend %link;
+      font-weight: bold;
+      transition: color 250ms linear;
+
+      @media screen and (max-width: 1199px) {
+        line-height: 1.3;
+        letter-spacing: 0;
+        padding-top: 13px;
+        padding-left: 21px;
+        padding-bottom: 11px;
+        border-top: 1px solid $border-color;
+
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        color: $primary-text-pink;
+      }
+    }
+  }
+}
+
+.hero-section {
+  padding-top: 136px;
+  padding-bottom: 160px;
+  .hero-title {
+    margin: 0;
+    margin-bottom: 19px;
+    padding: 0;
+    width: 218px;
+    font-family: $second-font-family;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+    color: $white;
+
+    .passion {
+      margin: 0;
+      padding: 0;
+
+      font-size: 46px;
+      line-height: 1.3;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $primary-text-pink;
+    }
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  .hero-button {
+    @extend %link;
+    font-size: 8px;
+    line-height: 8px;
+    border-radius: 20px;
+
+    &:first-child {
+      color: $white;
+      background: $primary-text-pink;
+      padding: 8px 12px;
+      margin-right: 8px;
+
+      &:hover,
+      &:focus {
+        color: $primary-text-pink;
+        background: $white;
+      }
+    }
+
+    &:last-child {
+      background: $white;
+      color: $primary-text-pink;
+      padding: 8px 10px;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background: $primary-text-pink;
+      }
+    }
   }
 }
