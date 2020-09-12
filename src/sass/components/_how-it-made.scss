@@ -1,0 +1,31 @@
+.section-made {
+  background: $section-bgc;
+}
+
+.title-made {
+  padding-top: 125px;
+  margin: 0;
+
+  font-family: $second-font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $circle-bgc;
+
+  .second-title {
+    margin-top: 15px;
+
+    font-family: $second-font-family;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $primary-text-pink;
+  }
+}
