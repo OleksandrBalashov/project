@@ -1,3 +1,28 @@
 .events-list{
 @extend %list;
 }
+.events-section{
+    background-color: $events-section-bgc;
+}
+.events-list__container{
+    padding: 43px 20px;
+}
+.events-list__item{
+    background-color: $white;
+    box-shadow: 0px 8px 30px
+    rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    width: 220px;
+    height: auto;
+}
+.events-list__item__first-section__cafe{
+    width: 80px;
+    display: flex;
+    background-color:$yellow-bgc;
+    border-radius: 4px;
+    font-size: 12px;
+    justify-content: center;
+    color: $white;
+    text-transform: uppercase;
+    fontw: 500;
+}
