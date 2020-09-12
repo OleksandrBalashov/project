@@ -1,10 +1,35 @@
 .section-products {
     
     .title-products {
-        font-family: Titan One;
+        font-family: $second-font-family;
         font-size: 18px;
         line-height: 1.17;
         text-align: center;
         text-transform: uppercase;
+    }
+    .list-products {
+        @extend %list
+    }
+    .item-products-pink {
+        background: $main-bgc;
+        border-radius: 24px;
+        height: 485px;
+        z-index: -10;
+    }
+
+    .list-circle {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .circle {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $white;
+        
+        &:not(:last-child) {
+            margin-right: 4px;
+          }
     }
 }
