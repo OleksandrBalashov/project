@@ -4,8 +4,17 @@
   }
 
   &-quote {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 255%;
+
+    text-align: center;
     background-color: $quote-bgc;
-    // padding: ;
+    padding: 43px 56px 26px 57px;
+  }
+
+  &-quote::before {
+    content: '\201D';
   }
 }
 .carousel-btn {
