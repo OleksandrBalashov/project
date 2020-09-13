@@ -81,6 +81,8 @@
             margin: 13px;
             padding-bottom: 50px;
         }
+
+        
     }
 
     .bcg-pink {
@@ -166,6 +168,29 @@
         height: 6px;
         border-radius: 50%;
         background: $white;
+        animation: 5s ease infinite pulse;
+
+        @keyframes pulse {
+        0% {
+            background: $white;
+            transform: scale(1);
+        }
+        
+        25% {
+            background: $main-bgc;
+            transform: scale(1.015);
+        }
+        
+        50% {
+            background: $primary-text-pink;
+            transform: scale(1);
+        }
+
+        75% {
+            background: $primary-text-pink;
+            transform: scale(1);
+        }
+        }
         
         &:not(:last-child) {
             margin-right: 4px;
@@ -217,6 +242,12 @@
 
     .arrow-product {
         @extend %centered-flex;
+        text-decoration: none;
+        &:hover .arrow,
+        &:focus .arrow {
+            transform: rotate(360deg);
+            transition: 1s;
+        }
     }
 
     .arrow {
@@ -226,6 +257,6 @@
         border-radius: 50%;
         background: $white;
         color: $primary-text-pink;
-        font-size: 17px;
+        font-size: 17px; 
     }
 }
