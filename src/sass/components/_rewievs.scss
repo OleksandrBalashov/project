@@ -8,16 +8,65 @@
   }
 }
 
-.review {
-  &-list {
-    @extend %list;
-    padding: 0 5px 0 5px;
+.wrap > input {
+  display: none;
+}
 
-    @media screen and(min-width: 768px) {
-      padding: 0 59px 0 59px;
-    }
+.slider {
+  @extend %list;
+  padding: 0 5px 0 5px;
+
+  @media screen and(min-width: 768px) {
+    padding: 0 59px 0 59px;
   }
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
 
+.slides {
+  position: relative;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.slide-1,
+.slide-2,
+.slide-3 {
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+#point1:checked ~ .slider > .slide-1,
+#point2:checked ~ .slider > .slide-2,
+#point3:checked ~ .slider > .slide-3 {
+  display: block;
+}
+
+#point1:checked ~ .control > .point-1,
+#point2:checked ~ .control > .point-2,
+#point3:checked ~ .control > .point-3 {
+  background-color: $primary-text-pink;
+}
+
+.wrap .control {
+  @extend %centered-flex;
+}
+
+.wrap label {
+  height: 12px;
+  width: 12px;
+
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  background-color: #d9d9d9;
+  cursor: pointer;
+  display: inline-block;
+  margin: 9px;
+  position: relative;
+}
+
+.review {
   &-item {
     position: relative;
   }
@@ -197,3 +246,4 @@
 .is-hiden {
   @extend %visually-hidden;
 }
+// __________________
