@@ -2,10 +2,18 @@
 //  * Все паршалы подключаются сюда.
 
 // Стили для файла с примером HTML-фрагмента
-// variables
 @import './utils/variables';
 @import './utils/placeholders';
 @import './base/base-selectors';
 @import './base/container';
-
+// hero
+@import './components/first-screen';
+// Продукты
+@import "./components/product";
+@import './components/how-it-made';
 @import './components/rewievs';
+
+
+
+
+
