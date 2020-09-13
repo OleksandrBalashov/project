@@ -128,6 +128,11 @@
 .point-2,
 .point-3 {
   fill: transparent;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+  &:hover {
+    background-color: $primary-text-pink;
+  }
 }
 
 .svg-home {
