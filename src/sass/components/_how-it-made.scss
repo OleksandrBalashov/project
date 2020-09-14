@@ -2,12 +2,20 @@
   background: $section-bgc;
   padding-top: 125px;
   padding-bottom: 145px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 264px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 311px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .section-made {
-    max-width: 768px;
-    background-image: url(../images/bgi-milk-m.png);
+    // max-width: 768px;
+    background-image: url('../images/bgi-milk-m.png');
     background-repeat: no-repeat;
     background-position: 0 780px;
     background-size: contain;
@@ -15,7 +23,7 @@
 
   @media (min-resolution: 2dppx) {
     .section-made {
-      background-image: url(../images/bgi-milk-m@2x.png);
+      background-image: url('../images/bgi-milk-m@2x.png');
     }
   }
 }
@@ -24,7 +32,7 @@
   .section-made {
     max-width: 100%;
 
-    background-image: url(../images/bgi-milk-desc.png);
+    background-image: url('../images/bgi-milk-desc.png');
     background-repeat: no-repeat;
     background-position: 0 281px;
     background-size: contain;
@@ -32,7 +40,7 @@
 
   @media (min-resolution: 2dppx) {
     .section-made {
-      background-image: url(../images/bgi-milk-desc@2x.png);
+      background-image: url('../images/bgi-milk-desc@2x.png');
     }
   }
 }
