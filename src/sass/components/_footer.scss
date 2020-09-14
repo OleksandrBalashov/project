@@ -3,16 +3,19 @@
 }
 
 .footer-flex {
-  padding: 43px 0 43px;
+  padding-top: 43px;
+  padding-bottom: 43px;
 
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    padding: 91px 0 91px;
+    padding-top: 91px;
+    padding-bottom: 91px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 97px 0 97px;
+    padding-top: 97px;
+    padding-bottom: 97px;
   }
 }
 
@@ -164,6 +167,10 @@
 
     @media screen and (min-width: 1200px) {
       letter-spacing: 0.02em;
+    }
+
+    .contact-text {
+      margin-right: 4px;
     }
   }
 }
