@@ -1,3 +1,11 @@
+.rewievs {
+  padding-bottom: 170px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 240px;
+  }
+}
+
 .collage {
   @extend %centered-flex;
   margin: 0 auto;

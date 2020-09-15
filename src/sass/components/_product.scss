@@ -243,10 +243,15 @@
 
 .section-products {
   .arrow-product {
-    @extend %centered-flex;
-    text-decoration: none;
+    @extend %link;
+
+    width: 40px;
+    margin: 0 auto;
+
     &:hover .arrow,
     &:focus .arrow {
+      color: $white;
+      background: $primary-text-pink;
       transform: rotate(360deg);
       transition: 1s;
     }
